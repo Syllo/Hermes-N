@@ -6,7 +6,7 @@ Class de merde
 - client
 - interface graphaël
 - message
-- 
+- Good luck // Affiche un spam good luck a l'aide du konami code
 
 threads :
 - server
@@ -39,3 +39,5 @@ PENSER A --help description du prog de pgm
 message.parser() // C++ rpz
 
 Réutiliser GOOD LUCK !!!!!!!!!!!!!!!!!!!!
+
+Corba c-- => omniorb
