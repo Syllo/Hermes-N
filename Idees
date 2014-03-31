@@ -1,0 +1,41 @@
+corba - chéplouschplousch
+
+Class de merde
+- Fichier de config
+- server
+- client
+- interface graphaël
+- message
+- 
+
+threads :
+- server
+- client attente message & maj utilisateur
+- client qui écrit quoi
+
+struct server {
+    mutex;
+    char* data;
+    };
+
+int sendMesg(struct server* server, struct message* message){ // envoie un message aux personnes
+};
+
+int lireFichierConfig(struct ficher_bidule* fichier, char* nom_fichier) // Init la class fichier config avec le fichier de nom nom_fichier
+int ecrireFichierConfig(struct ficher_bidule* fichier, char* nom_fichier)
+// ecrit la config contenu dans la class Fichier config dans le fichier nommé nom_fichier
+
+int init(struct ficher_bidule* ..){ // init le serveur avec le fichier de config
+}
+
+int newServer(struct server*)... // creation serveur
+
+int mesgRcv(struct server* ) // bloquante tant que non mesg
+
+PENSER A --help description du prog de pgm
+
+!!!!!!!!!!!!!!!! 14 avril 2014 !!!!!!!!!!!!!!!!!
+
+message.parser() // C++ rpz
+
+Réutiliser GOOD LUCK !!!!!!!!!!!!!!!!!!!!
