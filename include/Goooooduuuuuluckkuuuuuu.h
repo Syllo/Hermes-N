@@ -3,6 +3,7 @@
 
 class GoodLuck{
 	public:
+	afficherGoodLuck();
 	
 	private:
 }
