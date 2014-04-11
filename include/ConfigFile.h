@@ -1,14 +1,21 @@
-#ifndef __CONFIG_FILE_H
-#define __CONFIG_FILE_H
+#ifndef __CONFIGFILE_H__
+#define __CONFIGFILE_H__
 
-typedef struct{
-	
-	} fileconfig;
-	
-class ConfigFile{
-	public:
-	
+#include <vector>
+
+#include "Contact.h"
+
+class ConfigFile
+{
 	private:
-}
+		const char *m_name;
+	
+	public:
+		ConfigFile(const char *name);
+		~ConfigFile();
+		
+		bool Read(std::vector<Contact*>& contacts);
+		bool Write();
+};
 
-#endif //__CONFIG_FILE_H
+#endif
