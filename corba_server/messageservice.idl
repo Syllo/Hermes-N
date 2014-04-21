@@ -1,0 +1,35 @@
+#ifndef MESSAGESERVICE_IDL
+#define MESSAGESERVICE_IDL
+
+module MessageService{
+
+    struct Client{
+        string IpAddr;
+        string Name;
+    };
+
+    exception ServerException{
+        string reason
+    };
+
+    interface Chat{
+        readonly attribute string status; // (Ex: Away, Ready to chat ...)
+
+        void inMessage(in string message)
+            raises(ServerException);
+
+        void changeStatus(in Client, in string status)
+            raises(ServerException);
+    };
+
+    interface Connections{
+        void connect(in Client client)
+            raises(ServerException);
+
+        void disconnect(in Client client)
+            raises(ServerException);
+    };
+
+}
+
+#endif // ( MESSAGESERVICE_IDL )
