@@ -9,7 +9,7 @@ module MessageService{
     };
 
     exception ServerException{
-        string reason
+        string reason;
     };
 
     interface Chat{
@@ -18,18 +18,18 @@ module MessageService{
         void inMessage(in string message)
             raises(ServerException);
 
-        void changeStatus(in Client, in string status)
+        void changeStatus(in Client cli, in string status)
             raises(ServerException);
     };
 
     interface Connections{
-        void connect(in Client client)
+        void connect(in Client cli)
             raises(ServerException);
 
-        void disconnect(in Client client)
+        void disconnect(in Client cli)
             raises(ServerException);
     };
 
-}
+};
 
 #endif // ( MESSAGESERVICE_IDL )
