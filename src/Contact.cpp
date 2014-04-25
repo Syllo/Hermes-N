@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Contact.h"
+#include "../include/Contact.h"
 
 Contact::Contact(std::string name):
 m_name(name)
@@ -29,7 +29,7 @@ void Contact::AddContact(Contact *contact)
 
 std::string Contact::FindContactAddress(const std::string name)
 {
-	for(unsigned int i = 0; i < m_contacts.size(); i++)
+	for(int i = 0; i < (int)m_contacts.size(); i++)
 	{
 		if(m_contacts.at(i)->GetName().compare(name) == 0)
 			return m_contacts.at(i)->GetAddress();
@@ -56,7 +56,7 @@ void Contact::ShowInfo()
 	
 	if(m_contacts.size() > 0)
 		std::cout << "Liste : " << std::endl;
-	for(unsigned int i = 0; i < m_contacts.size(); i++)
+	for(int i = 0; i < (int)m_contacts.size(); i++)
 	{
 		std::cout << m_contacts.at(i)->GetName() << std::endl;
 	}

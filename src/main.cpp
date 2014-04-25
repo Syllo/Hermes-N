@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 
-#include "ConfigFile.h"
-#include "Contact.h"
+#include "../include/ConfigFile.h"
+#include "../include/Contact.h"
 
 using namespace std;
 
@@ -15,15 +15,13 @@ int main(int argc, char *argv[])
 	{
 		return 1;
 	}
-	
-	for(unsigned int i = 0; i < contacts.size(); i++)
+		
+	for(int i = 0; i < (int)contacts.size(); i++)
 	{
 		contacts.at(i)->ShowInfo();
-		if(i != contacts.size() - 1)
+		if(i != (int)contacts.size() - 1)
 			cout << endl;
 	}
-	
-	cout << "\nAdresse de Benoit que possede Isaac : " << contacts.back()->FindContactAddress("Benoit") << endl;
 	
 	delete cfg;
 	
